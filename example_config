@@ -1,2 +1,6 @@
 [slack]
 API_TOKEN=xxxx-11111111111-xxXx1xxXxxxxx1XXxxxxXxXx
+
+[google-places]
+API_TOKEN=xxXx1xxXxxxxx1XXxxxxXxXx
+location=1 Main St, City, Province
