@@ -2,6 +2,7 @@
 from slackbot.bot import Bot
 import slackbot.settings as settings
 from googleplaces import GooglePlaces, types, lang
+import googlemaps
 import logging
 import sys
 import os
@@ -20,6 +21,7 @@ def main():
 
 	settings.API_TOKEN = lunchotron_config.get("slack", "API_TOKEN")
 	settings.gPlaces = GooglePlaces(lunchotron_config.get("google-places", "API_TOKEN"))
+	settings.gmaps = googlemaps.Client(lunchotron_config.get("google-places", "API_TOKEN"))
 	settings.location = lunchotron_config.get("google-places", "location")
 
 	settings.PLUGINS = ["lunchotron"] #Overwrites other plugins. Don't need upload for instance.
